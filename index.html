@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta name="Author" content="蘋果新聞網">
+    <meta name="Description" content="高手在民間! 2020「全聯料理爭霸戰」線上「陸」、「海」、「空」主題餐預賽，網羅上千名料理愛好者投稿食譜，
+        自茫茫人海中依據料理創意度挑選出十位總決賽入選者。十位總決賽選手將接受專業美食評鑑家評比，選出最具創意的料理高手。">
+    <meta name="Keywords" content="2020全聯料理爭霸戰">
+    <meta name="Copyright" content="香港商壹傳媒 蘋果新聞網">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="2020全聯料理爭霸戰">
+    <meta property="og:description" content="高手在民間! 2020「全聯料理爭霸戰」線上「陸」、「海」、「空」主題餐預賽，網羅上千名料理愛好者投稿食譜，
+        自茫茫人海中依據料理創意度挑選出十位總決賽入選者。十位總決賽選手將接受專業美食評鑑家評比，選出最具創意的料理高手。">
+    <meta property="og:image" content="img/fb_img_.jpg" />
+
+    <link rel="icon" href="https://img.appledaily.com.tw/appledaily/pinsite/64x64.ico" type="image/png">
+    <title>2020全聯料理爭霸戰</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Google Chart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- AOS - Animate -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Loaders -->
+    <link rel="stylesheet" type="text/css" href="./css/loaders.min.css">
+
+    <!-- font_awesome -->
+    <link href="./css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+    <!-- Mine -->
+    <script type="text/javascript" src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+
+<body>
+
+    <!-- mobile_menu -->
+    <div id="mobile_menu">
+        <div class="wrap">
+            <img src="img/sec_a/head1.png" onclick="JumpContent('#Section_B', null)" alt="全聯料理爭霸戰">
+            <img src="img/sec_a/head2.png" onclick="JumpContent('#Chef_Container', null)" alt="預測總冠軍">
+            <img src="img/sec_a/head3.png" onclick="JumpContent('#Section_D', null)" alt="活動辦法">
+        </div>
+    </div>
+
+
+    <!-- Nav Bar -->
+    <header>
+        <div class="wrap">
+            <div class="logo mix_logo">
+                <a class="logo-apple">
+                    <img src="img/logo_mix.svg" alt="蘋果日報X全聯福利中心">
+                    <a class="box_px" href="http://www.pxmart.com.tw/px/index.px" target="_blank"></a>
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li onclick="JumpContent('#Section_B', this)">
+                    <img src="img/sec_a/head1.png" alt="全聯料理爭霸戰">
+                </li>
+                <li onclick="JumpContent('#Chef_Container', this)">
+                    <img src="img/sec_a/head2.png" alt="預測總冠軍">
+                </li>
+                <li onclick="JumpContent('#Section_D', this)">
+                    <img src="img/sec_a/head3.png" alt="活動辦法">
+                </li>
+            </ul>
+
+            <div id="mobile_nav_btn">
+                <a class="icon-menu" href="javascript:;">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <div class="empty_block"></div>
+
+
+    <!-- Modal For Vote -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Chef Name</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <img id="Modal_Img" src="" alt="">
+                            </div>
+                            <div id="Modal_Info" class="col-12 col-sm-6">
+                                Info
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <h6>請填妥姓名，聯絡電話和 email 以完成投票</h6>
+                    <form id="My_Form">
+                        <div>
+                            <label class="col-sm-12">
+                                <input type="text" placeholder="姓名" name="entry.329448032">
+                            </label>
+                            <label class="col-sm-12">
+                                <input type="text" placeholder="聯絡電話" name="entry.707783088">
+                            </label>
+                            <label class="col-sm-12">
+                                <input type="text" placeholder="email" name="entry.1170141712">
+                            </label>
+                            <label style=display:none>
+                                <select id="option_list" name="entry.65482305">
+                                    <option value="劉佳儀">劉佳儀</option>
+                                    <option value="李佩玹">李佩玹</option>
+                                    <option value="陳藝文">陳藝文</option>
+                                    <option value="劉芷彤">劉芷彤</option>
+                                    <option value="陳建宏">陳建宏</option>
+                                    <option value="李淑華">李淑華</option>
+                                    <option value="江湄鈴">江湄鈴</option>
+                                    <option value="張惠雅">張惠雅</option>
+                                    <option value="黃惠新">黃惠新</option>
+                                    <option value="陳以沛">陳以沛</option>
+                                </select>
+                            </label>
+                        </div>
+                    </form>
+
+                    <span id="Modal_Status_Text"></span>
+
+                    <div id="Loader" style="display: none;">
+                        <div class="loader-inner ball-scale-multiple">
+                            <div style="background-color: rgb(2, 49, 255);"></div>
+                            <div style="background-color: rgb(255, 8, 8);"></div>
+                            <div style="background-color: rgb(2, 49, 255);;"></div>
+                        </div>
+                        <div></div>
+                    </div>
+                    <button id="Modal_Submit_Btn" type="button" class="btn btn-primary">投票</button>
+
+
+                    <button id="Modal_Share_Btn" type="button" class="btn btn-primary"
+                        onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=https://tw.ticket.appledaily.com/goodfriends/events/2020_px_chef/index.html&display=popup&ref=plugin&src=like&kid_directed_site=0&app_id=113869198637480','高手在民間! 2020「全聯料理爭霸戰」線上「陸」、「海」、「空」主題餐預賽，網羅上千名料理愛好者投稿食譜，自茫茫人海中依據料理創意度挑選出十位總決賽入選者。十位總決賽選手將接受專業美食評鑑家評比，選出最具創意的料理高手。）','width=700,height=600');">分享至臉書已完成抽獎資格</button>
+                </div>
+            </div>
+        </div>
+
+        <img id="bear" src="./img/bear1.png" alt="">
+        <img id="bear_anim" src="./img/bear2.png" alt="">
+
+    </div>
+
+
+    <!-- Section_A -->
+    <div id="Section_A">
+
+        <div id="main" class="dispose">
+
+            <div class="wrap">
+
+                <!-- Fire -->
+                <div class="top_fire">
+                    <img src="./img/sec_a/top_fire.png" alt="">
+                </div>
+                <div class="top_fire_flip">
+                    <img src="./img/sec_a/top_fire.png" alt="">
+                </div>
+
+                <div class="bot_fire">
+                    <img src="./img/sec_a/bot_fire.png" alt="">
+                </div>
+                <div class="bot_fire_flip">
+                    <img src="./img/sec_a/bot_fire.png" alt="">
+                </div>
+
+
+
+                <!-- Px -->
+                <div class="px_air px_man">
+                    <img src="./img/sec_a/air.png" alt="">
+                </div>
+                <div class="px_air_flip px_man">
+                    <img src="./img/sec_a/air.png" alt="">
+                </div>
+
+                <div class="px_navy px_man">
+                    <img src="./img/sec_a/navy.png" alt="">
+                </div>
+                <div class="px_navy_flip px_man">
+                    <img src="./img/sec_a/navy.png" alt="">
+                </div>
+
+                <div class="px_army px_man">
+                    <img src="./img/sec_a/army.png" alt="">
+                </div>
+                <div class="px_army_flip px_man">
+                    <img src="./img/sec_a/army.png" alt="">
+                </div>
+
+                <!-- Arrow -->
+                <div class="bot_arrow">
+                    <img src="./img/sec_a/arrow.png" alt="">
+                </div>
+
+                <!-- Logo -->
+                <div class="top_logo">
+                    <img src="./img/px_square_.svg" alt="">
+                    <div class="top_title">
+                        <img src="./img/sec_a/2020.png" alt="">
+                        <img src="./img/sec_a/title.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bottom_decor"></div>
+        </div>
+
+
+        <div id="main_mobile">
+            <img src="./img/main_mobile.png" alt="">
+        </div>
+
+
+        <div id="main_mobile_long">
+            <!-- <img src="img/fb_img.jpg" alt=""> -->
+
+            <div class="bot_fire">
+                <img src="./img/sec_a/bot_fire.png" alt="">
+            </div>
+
+            <div class="top_logo">
+                <img src="./img/px_square_.svg" alt="">
+                <div class="top_title">
+                    <img src="./img/sec_a/2020.png" alt="">
+                    <img src="./img/sec_a/title.png" alt="">
+                </div>
+            </div>
+
+
+            <div class="px_air px_man_long">
+                <img src="./img/sec_a/air.png" alt="">
+            </div>
+            <div class="px_navy px_man_long">
+                <img src="./img/sec_a/navy.png" alt="">
+            </div>
+            <div class="px_army px_man_long">
+                <img src="./img/sec_a/army.png" alt="">
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Section_B -->
+    <div id="Section_B">
+
+        <div class="wrap">
+            <!-- <img src="./img/sec_b/title.png" alt="2020全聯料理爭霸戰"> -->
+
+            <div class="switch-tab">
+                <ul>
+                    <li>
+                        <img src="./img/sec_b/tab1.png" alt="活動簡介">
+                    </li>
+                    <li>
+                        <img src="./img/sec_b/tab2.png" alt="評審團介紹">
+                    </li>
+                    <li>
+                        <img src="./img/sec_b/tab3.png" alt="神秘嘉賓">
+                    </li>
+                </ul>
+
+
+
+                <img class="sec_fire_left" src="./img/sec_c/decor_l.png" alt="">
+                <img class="sec_fire_right" src="./img/sec_c/decor_r.png" alt="">
+
+            </div>
+            <div class="switch-content">
+                <div class="sec1">
+                    <img src="./img/sec_b/title_b_sub1.png" alt="">
+                    <div class="descr">
+                        高手在民間！<br>
+                        2020「全聯料理爭霸戰」線上「陸」、「海」、「空」主題餐預賽，網羅上千名料理愛好者投稿食譜，
+                        自茫茫人海中依據料理創意度挑選出十位總決賽入選者。
+                        十位總決賽選手將接受專業美食評鑑家評比，選出最具創意的料理高手。以海、陸、空三種類型食材發想三道小份量精緻創意料理，
+                        三道料理必須集結成一個套餐，並擺盤在同一自備餐盤或擺盤裝飾品內，需賦予套餐「名稱」 以及「故事意義」 。
+                    </div>
+
+                    <div id="get_pdf_btn">
+                        <img src="./img/sec_c/btn.png" alt="看比賽規則">
+                    </div>
+
+                </div>
+
+                <div class="sec2">
+                    <img src="./img/sec_b/title_b_sub2.png" alt="">
+                    <div class="judge">
+                        <img src="./img/sec_b/title_b_sub2_inner1.png" alt="" id="judge1">
+                        <img src="./img/sec_b/title_b_sub2_inner2.png" alt="" id="judge2">
+                        <img src="./img/sec_b/title_b_sub2_inner3.png" alt="" id="judge3">
+
+                        <img src="./img/sec_b/title_b_sub2_inner1_1.png" alt="">
+                        <img src="./img/sec_b/title_b_sub2_inner2_1.png" alt="">
+                        <img src="./img/sec_b/title_b_sub2_inner3_1.png" alt="">
+                    </div>
+
+                    <div class="judge_mobile">
+                        <img src="./img/sec_b/judge.png" alt="">
+                        <div class="judge1_box"></div>
+                        <div class="judge2_box"></div>
+                        <div class="judge3_box"></div>
+                    </div>
+
+
+                    <div class="judje_descr">
+
+                        <div class="judge1_descr">
+                            <b>米其林廚師 蔡瑞郎</b><br>
+                            米其林一星山海樓行政主廚，入行超過26年，專精台菜，向蓬萊閣師傅黃德興
+                            學藝多年，更傳承數十道以上的1930年代的台菜。
+
+                            <!-- <b>米其林廚師 蔡瑞郎</b><br>
+                            有30多年老經驗、人稱「郎師」的米其林主廚蔡瑞郎，專攻台菜，與蓬萊閣師傅黃德興學藝多年，
+                            自黃師傅手工傳承1930年代的台菜數十道以上，堪稱目前最完整習得老師傅手藝的傳人之一。對於復原台菜有高度期待與熱情，
+                            對於每一道老台菜的技藝與精神總是反覆琢磨思考，期待有朝一日台菜能站上國際舞台，讓台菜的輝煌與風華能成為台灣人的驕傲。 -->
+                        </div>
+
+                        <div class="judge2_descr">
+                            <b>飲食作家 盧怡安</b><br>
+                            飲食作家並擁有十餘年生活雜誌記者經歷，2010年起開始習茶，著有《秋刀魚一條半》書籍。
+
+
+                            <!-- <b>美食品鑑家 胡天蘭</b><br>
+                            知名美食家胡天蘭，對食物擁有精闢分析、獨到見解，一路「吃美食」、「談美食」，進而成為家喻戶曉的美食評論家。
+                            談到美食，胡天蘭的言語之中讓人感受到無限熱情！ -->
+                        </div>
+
+                        <div class="judge3_descr">
+                            <b>米其林廚師 李文清</b><br>
+                            曾任米其林一星台北亞都麗緻大飯店天香樓副主廚26年，專長杭州菜、上海、
+                            江浙中式等中餐研發，目前擔任禾馨士林產後護理之家副廚師長。
+
+                            <!-- <b>米其林廚師 李文清</b><br>
+                            1992年進入天香樓從學徒做起，逐步獲得拔擢至三廚、二廚、一廚、領班，奠定深厚扎實的廚藝基礎，
+                            現為台北亞都麗緻大飯店天香樓副主廚，期間曾到香港天香樓考察受訓，
+                            更曾與天香樓團隊榮獲中華美食展套餐銀牌獎。 -->
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="sec3">
+                    <img src="./img/sec_b/title_b_sub3.png" alt="">
+                    <div class="descr">
+                        2020年9月19日十位民間料理高手將聚集一方，秀出深藏不露的廚藝與創意，爭霸二十萬元獎金總冠軍！食神料理對決全程直播，權威美食家評鑑，公平、公正、公開！
+                    </div>
+                    <img src="./img/sec_b/title_b_sub3_inner1.png" alt="">
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="bottom_decor"></div>
+    </div>
+
+
+
+    <!-- Chef_Container -->
+    <div id="Chef_Container">
+        <div class="wrap">
+            <img src="./img/chef/title.png" alt="總決賽入選者">
+
+            <div class="YT_Cover">
+                <div class="Youtube_Container">
+                    <iframe class="video" src="https://www.youtube.com/embed/iU61YZUmqHI" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <img class="sec_fire_left dispose" src="./img/chef/decor_l.png" alt="">
+            <img class="sec_fire_right dispose" src="./img/chef/decor_r.png" alt="">
+
+            <img class="sec_fire_left fire_sec1 dispose" src="./img/chef/decor_l.png" alt="">
+            <img class="sec_fire_right fire_sec1 dispose" src="./img/chef/decor_r.png" alt="">
+
+            <img class="sec_fire_left fire_sec2 dispose" src="./img/chef/decor_l.png" alt="">
+            <img class="sec_fire_right fire_sec2 dispose" src="./img/chef/decor_r.png" alt="">
+
+            <div class="row">
+                <div class="shell" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="./img/chef/chef1_.png" alt="">
+                    <div class="Vote_Count" chef_data="劉佳儀"
+                        chef_descr="求學時期讀的不是餐飲科，工作也非餐飲業，因為愛吃，走過亞洲、美洲、歐洲、南美洲認識各國飲食文化，發現最愛的還是台灣菜，因食安問題開始下廚。">0票</div>
+                    <button type="button" index="1" class="btn Vote_Btn" data-toggle="modal"
+                        data-target="#exampleModalCenter">投票</button>
+                </div>
+
+                <div class="shell odd_shell" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="./img/chef/chef2_.png" alt="">
+                    <div class="Vote_Count" chef_data="李佩玹" chef_descr="平日是廣告企劃，假日喜歡在廚房進行自編自導自演的精神治療。">0票</div>
+                    <button type="button" index="2" class="btn Vote_Btn" data-toggle="modal"
+                        data-target="#exampleModalCenter">投票</button>
+                </div>
+
+                <div class="shell" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="./img/chef/chef3_.png" alt="">
+                    <div class="Vote_Count" chef_data="陳藝文"
+                        chef_descr="來自台中市，目前任職於高雄，對於料理有著很大的熱忱，在料理工作上刻苦認真，積極參與各式烹飪活動，來增加自己的閱歷，勇於挑戰開發自我潛力。">0票</div>
+                    <button type="button" index="3" class="btn Vote_Btn" data-toggle="modal"
+                        data-target="#exampleModalCenter">投票</button>
+                </div>
+
+                <div class="shell odd_shell" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="./img/chef/chef4_.png" alt="">
+                    <div class="Vote_Count" chef_data="劉芷彤"
+                        chef_descr="從小貪吃的個性，讓我喜歡上自己做餐點，滿足自己的味蕾及肚子，小時候因為卡通的影響，對做料理有一份憧憬，喜歡從報紙、美食節目尋找靈感。">0票</div>
+                    <button type="button" index="4" class="btn Vote_Btn" data-toggle="modal"
+                        data-target="#exampleModalCenter">投票</button>
+                </div>
+
+                <div class="shell" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="./img/chef/chef5_.png" alt="">
+                    <div class="Vote_Count" chef_data="陳建宏"
+                        chef_descr="半退休數學老師，退伍後就一直在北部的補教業任職，最近幾年半退休後，主要的休閒活動是拍照、運動，以及偶爾下廚為家人準備餐點。">0票</div>
+                    <button type="button" index="5" class="btn Vote_Btn" data-toggle="modal"
+                        data-target="#exampleModalCenter">投票</button>
+                </div>
+
+                <div class="shell odd_shell" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="./img/chef/chef6_.png" alt="">
+                    <div class="Vote_Count" chef_data="李淑華"
+                        chef_descr="今年53歲，在主婦界打滾已有近30年的時間，閒暇之餘，喜歡和可愛的女兒一起到超市選購食材，構想些天馬行空的料理組合，透過製作料理，互相學習成長。">0票</div>
+                    <button type="button" index="6" class="btn Vote_Btn" data-toggle="modal"
+                        data-target="#exampleModalCenter">投票</button>
+                </div>
+
+                <div class="shell" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="./img/chef/chef7_.png" alt="">
+                    <div class="Vote_Count" chef_data="江湄鈴"
+                        chef_descr="科技業PM，平時熱愛工作之外也非常喜歡烹調美食，更喜歡利用休假到全世界各地去旅遊、登山或跑步，順便品嘗當地獨特的料理。">0票</div>
+                    <button type="button" index="7" class="btn Vote_Btn" data-toggle="modal"
+                        data-target="#exampleModalCenter">投票</button>
+                </div>
+
+                <div class="shell odd_shell" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="./img/chef/chef8_.png" alt="">
+                    <div class="Vote_Count" chef_data="張惠雅"
+                        chef_descr="我是一個愛做菜的廚娘！一個婚後為了孩子們才開始洗手做羹湯的廚房苦手，慢慢從廣達香肉醬義大利麵進化到可以煮出健康美味的菜色來滿足全家人的味蕾！">0票</div>
+                    <button type="button" index="8" class="btn Vote_Btn" data-toggle="modal"
+                        data-target="#exampleModalCenter">投票</button>
+                </div>
+
+                <div class="shell" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="./img/chef/chef9_.png" alt="">
+                    <div class="Vote_Count" chef_data="黃惠新"
+                        chef_descr="國小六年級開始下廚，為了增加自己熱愛的廚藝，家中很多食譜書，也看了很多視頻，在上一年順利考取中農丙級！">0票</div>
+                    <button type="button" index="9" class="btn Vote_Btn" data-toggle="modal"
+                        data-target="#exampleModalCenter">投票</button>
+                </div>
+
+                <div class="shell odd_shell" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="./img/chef/chef10_.png" alt="">
+                    <div class="Vote_Count" chef_data="陳以沛"
+                        chef_descr="彰化人，從小在精通料理的母親薰陶下，成為一位熱愛料理的素人。喜歡利用創意，把料理步驟化繁為簡，變成能夠容易上手的料理。">0票</div>
+                    <button type="button" index="10" class="btn Vote_Btn" data-toggle="modal"
+                        data-target="#exampleModalCenter">投票</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Section_C -->
+    <div id="Section_C" style="display: none;">
+        <div class="wrap">
+            <img class="sec_img2" src="./img/sec_c/sub.png" alt="食力堅強總決賽入選者 (即將揭曉)">
+            <img class="sec_img3" src="./img/sec_c/decor.png" alt="">
+            <img class="sec_fire_left" src="./img/sec_c/decor_l.png" alt="">
+            <img class="sec_fire_right" src="./img/sec_c/decor_r.png" alt="">
+        </div>
+    </div>
+
+
+    <!-- Section_D -->
+    <div id="Section_D">
+        <div class="Info_Sec_1">
+            <div class="wrap">
+                <img src="./img/sec_d/title.png" alt="預測冠軍活動辦法">
+                <div class="descr">
+                    預測心目中的總冠軍！依據2020年9月19日全聯料理爭霸戰總決賽結果，比對參
+                    與活動網友的投票選項，從猜對冠軍者中抽出5位送出全聯好禮！三項超級好禮
+                    隨機寄送，不供挑選。
+                </div>
+            </div>
+        </div>
+
+        <div class="Info_Sec_2">
+
+            <div class="wrap">
+
+                <div class="switch-tab">
+                    <ul>
+                        <li>
+                            <img src="./img/sec_d/tab1.png" alt="投票三步驟">
+                        </li>
+                        <li>
+                            <img src="./img/sec_d/tab2.png" alt="獎品一覽">
+                        </li>
+                        <li>
+                            <img src="./img/sec_d/tab3.png" alt="了解活動詳情">
+                        </li>
+                    </ul>
+                </div>
+                <div class="switch-content">
+                    <div class="sec1">
+                        <img src="./img/sec_d/title_d_sub1.png" alt="投票三步驟">
+                        <div class="process">
+                            <div>
+                                <img src="./img/sec_d/step1.png" alt="投票">
+                                <b>1. 投票</b>
+                                <p>2020年9月11日00:01至2020年9月18日23:59止，從10位參賽者中投票票選預測冠軍，每人僅限投乙次(以手機號碼為主)。</p>
+                            </div>
+
+                            <div>
+                                <img src="./img/sec_d/step2.png" alt="填寫資料">
+                                <b>2. 填寫資料</b>
+                                <p>完整填寫個人資料並送出，且公開分享全聯料理爭霸戰活動網站於臉書者，即有抽獎資格。</p>
+                            </div>
+
+                            <div>
+                                <img src="./img/sec_d/step3.png" alt="抽獎">
+                                <b>3. 抽獎</b>
+                                <p>主辦單位將於2020年9月23日公佈得獎名單，從猜對冠軍者中抽出5位送出全聯好禮！</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sec2">
+                        <img src="./img/sec_d/title_d_sub2.png" alt="預測冠軍贈獎活動">
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img src="./img/sec_d/prize1.png" alt="BRUNO電火鍋">
+                                BRUNO電火鍋<br>
+                                價值 NT$3,990<br>
+                                數量 1 名
+                            </div>
+
+                            <div class="col-sm-4">
+                                <img src="./img/sec_d/prize2.png" alt="Jamie Oliver果汁調理機">
+                                Jamie Oliver果汁調理機<br>
+                                價值 NT $3,880<br>
+                                數量 1 名
+                            </div>
+
+                            <div class="col-sm-4">
+                                <img src="./img/sec_d/prize3.png" alt="Jamie Oliver多用途刀">
+                                Jamie Oliver多用途刀<br>
+                                價值 NT $990<br>
+                                數量 3 名
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="sec3">
+                        <img src="./img/sec_d/title_d_sub3.png" alt="注意事項">
+
+                        <div class="content_header">
+                            預測冠軍抽獎活動
+                        </div>
+                        <div class="descr">
+                            從十位總決賽入圍者中投票選出最有冠軍相的參賽者！按下參賽者簡介下方投票按鈕，留下個人基本資料並分享活動頁面，
+                            即有機會抽中全聯好禮，每人限投乙次。全聯料理爭霸戰總決賽結果揭曉後，主辦單位將從猜對冠軍的投票者中抽出5位送出贈品。
+                            註：三項超級好禮隨機寄送，贈品圖片僅供參考，以實際贈品為主。
+                        </div>
+
+                        <div class="content_header">
+                            注意事項
+                        </div>
+                        <div class="descr">
+                            <strong><b>&#9632; </b>活動時間：2020年9月11日00:01至2020年9月18日23:59止。</strong>
+                            <br>
+                            <strong><b>&#9632; </b>投票辦法：按下參賽者簡介下方投票按鈕，留下個人基本資料並分享活動頁面至個人臉書塗鴉牆並設公開，
+                                即有機會抽中全聯好禮，每人限投乙次。</strong>
+                            <br>
+                            <strong><b>&#9632; </b>媒體協辦單位《蘋果日報》不因任何原因之網路中斷服務致參加者無法於活動期間結束前參加活動，
+                                而需負擔任何責任。</strong>
+
+                            <div id="Hide_Content">
+                                <strong><b>&#9632; </b>得獎名單將於2020年9月23日公布於《蘋果日報》官方粉絲團以及此活動頁面，公告後的一週內，
+                                    我們將會聯繫得獎者且取得基本資料，並告知贈品寄送方式。</strong><br>
+
+                                <strong><b>&#9632; </b>依中華民國稅法規定，獎項金額若超過新台幣 1,000 元，得獎人須依規定填寫並繳交相關中獎收據。
+                                    得獎者若無法配合，則視為自動棄權，不具得獎資格。 獎項價值超過新台幣 20,000 元者，中獎者依法需自付 10% 稅額
+                                    (海外人士或不具中華民國身分者，機會中獎所得稅為20% )。 主辦單位將開立各類所得稅 扣繳憑單給中獎者。
+                                    如果得獎者不願意給付得獎商品之稅額，則視為得獎者自動棄權，不具得獎資格。</strong><br>
+
+                                <strong><b>&#9632; </b>得獎者保證所有填寫或提出之資料均為真實且正確，並未冒用或盜用任何第三人之資料，
+                                    如有致損害於主辦單位或其他任何第三人，參加者應負一切相關責任。個人資料若有不實或不正確之情事，
+                                    將被取消參加或得獎資格並不另行通知。</strong><br>
+
+                                <strong><b>&#9632; </b>本活動獎項以主辦單位公告之規格(實物)為準，若遇不可抗拒之因素，主辦單位保有更換等值商品之權利。
+                                    所有獎品均不得要求退換，亦不得以任何理由要求折換現金、其它物品或型號、顏色。兌換後，獎品之使用與維護，
+                                    由各該製造或代理廠商負責。</strong><br>
+
+                                <strong><b>&#9632; </b>個人資料相關事項：</strong><br>
+                                <strong>(a) 蒐集個人資料之機關為：主辦單位 蘋果日報。</strong><br>
+                                <strong>(b) 蒐集之目的：以參加者提供之個人資料辦理參加活動、中獎及領獎之相關事宜。</strong><br>
+                                <strong>(c) 個人資料之類別：包括姓名、電話、電子郵件信箱、地址等個人資料中之識別類資訊。</strong><br>
+                                <strong>(d) 個人資料利用之期間、地區、對象及方式:個人資料將於相關稅法資料保存期間內以及其他法規規定之期間內，
+                                    在台灣地區內由主辦單位依相關法律規定，以電磁紀錄或非電磁紀錄方式蒐集、處理、利用與參加者相關之中獎及領獎一切事宜。</strong><br>
+                                <strong>(e) 參加者若不提供個人資料將影響其參與活動以及中獎、領獎之相關權利。</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div id="Expand_Btn">
+                            <img class="linear" src="./img/sec_d/linear.png" alt="">
+                            <img class="expand_arrow" src="./img/sec_d/arrow.png" alt="">
+                            <div class="expand_text">展開</div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- to_top_btn -->
+    <div id="to_top_btn">
+        <i class="arrow"></i>
+    </div>
+
+
+
+    <!-- Recipe -->
+    <div id="recipe_btn" style="display:">
+        <img src="./img/recipe/recipe_btn.png" alt="">
+        <img src="./img/recipe/recipe_btn_flip.png" alt="">
+        <div class="red_card red_card_fixed">
+            <!-- random recipe -->
+            <img class="img_card" src="./img/recipe/land/1.png" alt="浮誇系8oz澳洲安格斯沙朗牛排照燒炒飯">
+            <img class="img_card" src="./img/recipe/sea/1.png" alt="海鮮煎餅">
+            <img class="img_card" src="./img/recipe/sky/1.png" alt="香烤味噌嫩雞腿佐時蔬">
+            <b> i am just a dish</b>
+            <div>
+                了解更多>>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- recipe_bot_btn -->
+    <div id="recipe_bot_btn">
+        <div class="Bumping">
+            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+            &nbsp;創意料理&nbsp;
+            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+        </div>
+    </div>
+
+
+    <!-- recipe_panel -->
+    <div id="recipe_panel">
+        <div class="recipe_sec1">
+            <div class="wrap">
+                <img src="./img/recipe/top.png" alt="">
+            </div>
+        </div>
+        <div class="recipe_sec2">
+            <div class="wrap">
+                <div class="switch-tab">
+                    <ul>
+                        <li>
+                            <img src="./img/recipe/land/land_.png" alt="陸">
+                        </li>
+                        <li>
+                            <img src="./img/recipe/sea/sea_.png" alt="海">
+                        </li>
+                        <li>
+                            <img src="./img/recipe/sky/sky_.png" alt="空">
+                        </li>
+                    </ul>
+                </div>
+                <div class="switch-content">
+                    <div class="sec1">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a class="red_card" href="https://icook.tw/recipes/348822" target="_blank">
+                                    <img src="./img/recipe/land/1.png" alt="">
+                                    <b>浮誇系8oz澳洲安格斯沙朗牛排照燒炒飯</b>
+                                    <div>
+                                        了解更多>>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a class="red_card" href="https://icook.tw/recipes/348504" target="_blank">
+                                    <img src="./img/recipe/land/2.png" alt="">
+                                    <b>台式三杯漢堡排堡</b>
+                                    <div>
+                                        了解更多>>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a class="red_card" href="https://icook.tw/recipes/348824" target="_blank">
+                                    <img src="./img/recipe/land/3.png" alt="">
+                                    <b>黑胡椒雙層起司牛排飯</b>
+                                    <div>
+                                        了解更多>>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec2">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a class="red_card" href="https://icook.tw/recipes/348332" target="_blank">
+                                    <img src="./img/recipe/sea/1.png" alt="">
+                                    <b>海鮮煎餅</b>
+                                    <div>
+                                        了解更多>>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a class="red_card" href="https://icook.tw/recipes/347136" target="_blank">
+                                    <img src="./img/recipe/sea/2.png" alt="">
+                                    <b>鹹蛋透抽義大利麵</b>
+                                    <div>
+                                        了解更多>>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a class="red_card" href="https://icook.tw/recipes/348536" target="_blank">
+                                    <img src="./img/recipe/sea/3.png" alt="">
+                                    <b>塔香蒜蓉紅燒魚</b>
+                                    <div>
+                                        了解更多>>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec3">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a class="red_card" href="https://icook.tw/recipes/347908" target="_blank">
+                                    <img src="./img/recipe/sky/1.png" alt="">
+                                    <b>香烤味噌嫩雞腿佐時蔬</b>
+                                    <div>
+                                        了解更多>>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a class="red_card" href="https://icook.tw/recipes/342568" target="_blank">
+                                    <img src="./img/recipe/sky/2.png" alt="">
+                                    <b>三杯雞蔥抓餅pizza</b>
+                                    <div>
+                                        了解更多>>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a class="red_card" href="https://icook.tw/recipes/348692" target="_blank">
+                                    <img src="./img/recipe/sky/3.png" alt="">
+                                    <b>椰汁雞湯烏龍冷麵</b>
+                                    <div>
+                                        了解更多>>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recipe_sec3">
+            <div class="wrap">
+
+                <img src="./img/recipe/title_news.png" alt="">
+                <div class="row">
+
+                    <div class="col-sm-4">
+                        <a href="https://tw.appledaily.com/supplement/20200911/BRG5EEEYBBB77IEXUYE22HN36E/" target="_blank">
+                            <img src="./img/recipe/news/1.png" alt="">
+                        </a>
+                        <div>【百萬總獎金】全聯首屆料理爭霸賽　9/19決勝負</div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <div>
+                <div class="copyright">© 2020 all rights reserved.&nbsp;</div>
+                <div class="copyright">台灣蘋果日報 版權所有 不得轉載</div>
+                <ul>
+                    <li>
+                        <a href="https://tw.feature.appledaily.com/info/termofuse" target="_blank"
+                            rel="nofollow">服務條款</a>
+                    </li>
+                    <li>
+                        <a href="https://tw.feature.appledaily.com/info/privacy" target="_blank"
+                            rel="nofollow">隱私權政策</a>
+                    </li>
+                    <li>
+                        <a href="https://tw.feature.appledaily.com/info/contactus" target="_blank"
+                            rel="nofollow">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <!-- close_recipe_btn -->
+        <div id="close_recipe_btn">
+            BACK
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <footer class="main_footer">
+        <div>
+            <div class="copyright">© 2020 all rights reserved.&nbsp;</div>
+            <div class="copyright">台灣蘋果日報 版權所有 不得轉載</div>
+            <ul>
+                <li>
+                    <a href="https://tw.feature.appledaily.com/info/termofuse" target="_blank" rel="nofollow">服務條款</a>
+                </li>
+                <li>
+                    <a href="https://tw.feature.appledaily.com/info/privacy" target="_blank" rel="nofollow">隱私權政策</a>
+                </li>
+                <li>
+                    <a href="https://tw.feature.appledaily.com/info/contactus" target="_blank" rel="nofollow">聯絡我們</a>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+    <!-- Google Chart -->
+    <!-- <div class="row">
+        <div class="col-md-12">
+            <div id="piechart" class="chart"></div>
+        </div>
+        <style>
+            .chart {
+                width: 100%;
+                min-height: 450px;
+            }
+        </style>
+    </div> -->
+
+
+</body>
+
+
+<script>
+    AOS.init();
+</script>
+
+
+</html>
