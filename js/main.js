@@ -1,13 +1,6 @@
 const preload = () => {
     $(".Vote_Count").hide()
-    $.post('https://script.google.com/macros/s/AKfycbysf2PxazM7jSvOrE3aapndPQB0CYzKZR8g7qeLgZ-3HQ8xTIzsQBphFnJ2t8WqEd_JZA/exec', {
-        f: "GetVoteCount"
-    }, function (json) {
-        console.log(json);
-        for (a = 0; a < Object.keys(json).length; a++) 
-            $(".Vote_Count[chef_data='" + Object.keys(json)[a] + "']").text(Object.values(json)[a] + "票");
-        $(".Vote_Count").show()
-    });
+    Get_Vote();
 }
 
 if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll))
@@ -42,7 +35,17 @@ const init = new Initialization(mobileCheck());
 
 
 
+function Get_Vote(){
+    $.post('https://script.google.com/macros/s/AKfycbysf2PxazM7jSvOrE3aapndPQB0CYzKZR8g7qeLgZ-3HQ8xTIzsQBphFnJ2t8WqEd_JZA/exec', {
+        f: "GetVoteCount"
+    }, function (json) {
+        console.log(json);
+        for (a = 0; a < Object.keys(json).length; a++) 
+            $(".Vote_Count[chef_data='" + Object.keys(json)[a] + "']").text(Object.values(json)[a] + "票");
+        $(".Vote_Count").show();
+    });
 
+}
 
 
 
@@ -278,7 +281,7 @@ $(function () {
             if (await CheckForm()) {
                 // $("#My_Form").submit();
                 setTimeout(function () {
-                    // GetVoteCount();
+                    Get_Vote();
                     $("#Modal_Status_Text").text("已完成投票，請分享至臉書，感謝您的參與!");
                     $("#Modal_Share_Btn").show();
                     $("#Loader").hide();
@@ -345,7 +348,7 @@ function CheckForm() {
             resolve(false);
             return;
         }
-
+        
         $.post('https://script.google.com/macros/s/AKfycbysf2PxazM7jSvOrE3aapndPQB0CYzKZR8g7qeLgZ-3HQ8xTIzsQBphFnJ2t8WqEd_JZA/exec', {
             f: "add",
             name: input_name.val(),
